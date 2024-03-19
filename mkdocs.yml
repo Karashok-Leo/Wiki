@@ -1,4 +1,5 @@
-site_name: My Wiki
+site_name: Leo's Wiki
 
 theme:
   name: 'material'
+  local: zh
