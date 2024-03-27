@@ -16,6 +16,7 @@ Directly left or right click to teleport other mob or yourself to a random posit
 ### Recipe
 
 You can use 8 Amethyst Shard and 1 Eye of Ender to craft Crystalline Eye of Ender.
+
 ![image](assets/crystalline-ender-eye/recipe.png)
 
 ## ⚙️Configuration
