@@ -7,6 +7,7 @@ This mod adds a item - Fusion Smithing Template, which allows you to transfer th
 ![Screenshot](assets/fusion-smithing/smithing.png)
 
 ### Loot Table
+
 You can find the fusion smithing template in the treasure chest of the End City.
 
 ![Screenshot](assets/fusion-smithing/loot_table.png)

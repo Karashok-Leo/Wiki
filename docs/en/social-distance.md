@@ -18,6 +18,7 @@ This mod is mainly made for modpacks, preventing players from easily killing bos
   }
 }
 ```
+
 To add the boss to the protection list, just simply add an entry to the "distance_config" property.
 
 The key of the entry represents the identifier (namespace:path) of the entity.

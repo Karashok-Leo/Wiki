@@ -21,6 +21,7 @@ In addition, you can quickly add new pools to existing loot tables by editing co
   "extraXpChance": 0.5
 }
 ```
+
 The first four entries determine the weights of various attributes.
 The remaining three entries are used to configure loot and experience drops.
 
@@ -29,8 +30,7 @@ The remaining three entries are used to configure loot and experience drops.
 It is obvious that there should be no ellipses or comments in the JSON format file, and this case is only for the sake of explanation.
 
 ### Configuration file:
-
-### ```extra-loot.json```
+#### ```extra-loot.json```
 
 ```
 {
@@ -50,8 +50,7 @@ It is obvious that there should be no ellipses or comments in the JSON format fi
 ```
 
 ### Datapack:
-
-### ```data/xxx/loot_tables/common_drop.json```
+#### ```data/xxx/loot_tables/common_drop.json```
 
 ```
 {
@@ -102,6 +101,7 @@ You should try to avoid infinite loops in the loot table during the configuratio
 ...
 }
 ```
+
 In this case, the target loot tables contain the extra table. If you kill a zombie, the zombie's loot table will attempt to drop itself, which causes infinite recursion.
 
 ## ✉️Feedback

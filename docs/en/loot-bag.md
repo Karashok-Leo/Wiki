@@ -8,6 +8,7 @@ Another loot bag mod, designed for modpacks.
 
 Right click to open a preview screen.
 Right click when sneaking to open the bag directly.
+
 ### (Single) Loot Bag
 
 Contains a single set of loot.
