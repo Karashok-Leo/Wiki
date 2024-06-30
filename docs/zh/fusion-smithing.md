@@ -1,4 +1,4 @@
-# 融锻 / Fusion Smithing
+# 融锻
 
 ## 🪄介绍
 
@@ -15,6 +15,59 @@
 ### 合成配方
 
 ![Screenshot](assets/fusion-smithing/recipe.png)
+
+## 🪚配方
+
+### 新的配方类型
+
+本模组添加了一种配方类型（`fusion-smithing:smithing_fusion`）。配方JSON文件如下：
+
+```
+{
+  "type": "fusion-smithing:smithing_fusion",
+  "template": {
+    "item": "fusion-smithing:fusion_smithing_template"
+  },
+  "base": {
+    "tag": "c:boots"
+  },
+  "addition": {
+    "tag": "c:boots"
+  }
+}
+```
+
+`template`字段即配方所用的锻造模板（放在模板槽位，但可以是任何物品， 不一定要是模板）；
+`base`字段即NBT数据转移的源物品；
+`addition`字段即NBT数据转移的目标物品。
+
+### 默认配方
+
+本模组添加了一些默认配方， 形式正如上面的示例配方，包含的Tag有：
+
+（需要安装[AutoTag](https://modrinth.com/mod/autotag)）
+
+| Tag | 代表物品 |
+| ----------- | ------------ |
+| `c:helmets` | 头盔 |
+| `c:chestplates` | 胸甲 |
+| `c:leggings` | 护腿 |
+| `c:boots` | 靴子 |
+| `c:bows` | 弓 |
+| `c:crossbows` | 弩 |
+| `c:shields` | 盾牌 |
+| `c:tridents` | 三叉戟 |
+
+（只需要原版或Fabric）
+
+| Tag                  | 代表物品 |
+| -------------------- | ---- |
+| `minecraft:swords`   | 剑    |
+| `minecraft:axes`     | 斧    |
+| `minecraft:pickaxes` | 镐    |
+| `minecraft:shovels`  | 铲    |
+| `minecraft:hoes`     | 锄    |
+| `c:shears`           | 剪刀   |
 
 ## ⚙️配置
 
