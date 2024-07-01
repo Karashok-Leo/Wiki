@@ -256,6 +256,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../enchantment-infusion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enchantment Infusion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../extra-loot/" class="md-nav__link">
         
   
@@ -344,6 +364,39 @@
   <a href="#recipe" class="md-nav__link">
     <span class="md-ellipsis">
       Recipe
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recipe_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🪚Recipe
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🪚Recipe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-recipe-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      New Recipe Type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-recipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default Recipes
     </span>
   </a>
   
@@ -444,26 +497,6 @@
   
 
     
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../spell-dimension-modpack/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    咒次元官方Wiki
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -513,6 +546,39 @@
   <a href="#recipe" class="md-nav__link">
     <span class="md-ellipsis">
       Recipe
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recipe_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🪚Recipe
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🪚Recipe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-recipe-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      New Recipe Type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-recipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default Recipes
     </span>
   </a>
   
@@ -589,6 +655,105 @@
 <p><img alt="Screenshot" src="../../assets/fusion-smithing/loot_table.png" /></p>
 <h3 id="recipe">Recipe</h3>
 <p><img alt="Screenshot" src="../../assets/fusion-smithing/recipe.png" /></p>
+<h2 id="recipe_1">🪚Recipe</h2>
+<h3 id="new-recipe-type">New Recipe Type</h3>
+<p>This mod adds a recipe type (<code>fusion-smithing:smithing_fusion</code>). The JSON file for a single recipe is as follows:</p>
+<pre><code>{
+  &quot;type&quot;: &quot;fusion-smithing:smithing_fusion&quot;,
+  &quot;template&quot;: {
+    &quot;item&quot;: &quot;fusion-smithing:fusion_smithing_template&quot;
+  },
+  &quot;base&quot;: {
+    &quot;tag&quot;: &quot;c:boots&quot;
+  },
+  &quot;addition&quot;: {
+    &quot;tag&quot;: &quot;c:boots&quot;
+  }
+}
+</code></pre>
+<p>The <code>template</code> field is the forge template used for the recipe (placed in the template slot, but can be any item, not necessarily a template);
+The <code>base</code> field is the source item for the NBT data transfer;
+The <code>addition</code> field is the target item for the NBT data transfer.</p>
+<h3 id="default-recipes">Default Recipes</h3>
+<p>This mod adds some default recipes, in the form of the example recipe above, containing the tags:</p>
+<p>（Require <a href="https://modrinth.com/mod/autotag">AutoTag</a>）</p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Items</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>c:helmets</code></td>
+<td>Helmets</td>
+</tr>
+<tr>
+<td><code>c:chestplates</code></td>
+<td>Chestplates</td>
+</tr>
+<tr>
+<td><code>c:leggings</code></td>
+<td>Leggings</td>
+</tr>
+<tr>
+<td><code>c:boots</code></td>
+<td>Boots</td>
+</tr>
+<tr>
+<td><code>c:bows</code></td>
+<td>Bows</td>
+</tr>
+<tr>
+<td><code>c:crossbows</code></td>
+<td>Crossbows</td>
+</tr>
+<tr>
+<td><code>c:shields</code></td>
+<td>Shields</td>
+</tr>
+<tr>
+<td><code>c:tridents</code></td>
+<td>Tridents</td>
+</tr>
+</tbody>
+</table>
+<p>（Require Vanilla or Fabric）</p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Items</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>minecraft:swords</code></td>
+<td>Swords</td>
+</tr>
+<tr>
+<td><code>minecraft:axes</code></td>
+<td>Axes</td>
+</tr>
+<tr>
+<td><code>minecraft:pickaxes</code></td>
+<td>Pickaxes</td>
+</tr>
+<tr>
+<td><code>minecraft:shovels</code></td>
+<td>Shovels</td>
+</tr>
+<tr>
+<td><code>minecraft:hoes</code></td>
+<td>Hoes</td>
+</tr>
+<tr>
+<td><code>c:shears</code></td>
+<td>Shears</td>
+</tr>
+</tbody>
+</table>
 <h2 id="configuration">⚙️Configuration</h2>
 <h3 id="the-initial-configuration-file-looks-like">The initial configuration file looks like:</h3>
 <pre><code>{  

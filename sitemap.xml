@@ -2,100 +2,100 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>None./</loc>
-        <lastmod>2024-04-01</lastmod>
+        <lastmod>2024-07-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="None"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/"/>
     </url>
     <url>
         <loc>Nonecrystalline-ender-eye/</loc>
-        <lastmod>2024-04-01</lastmod>
+        <lastmod>2024-07-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonecrystalline-ender-eye/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/crystalline-ender-eye/"/>
     </url>
     <url>
+        <loc>Noneenchantment-infusion/</loc>
+        <lastmod>2024-07-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="Noneenchantment-infusion/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/enchantment-infusion/"/>
+    </url>
+    <url>
         <loc>Noneextra-loot/</loc>
-        <lastmod>2024-04-01</lastmod>
+        <lastmod>2024-07-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="Noneextra-loot/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/extra-loot/"/>
     </url>
     <url>
         <loc>Nonefusion-smithing/</loc>
-        <lastmod>2024-04-01</lastmod>
+        <lastmod>2024-07-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonefusion-smithing/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/fusion-smithing/"/>
     </url>
     <url>
         <loc>Noneloot-bag/</loc>
-        <lastmod>2024-04-01</lastmod>
+        <lastmod>2024-07-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="Noneloot-bag/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/loot-bag/"/>
     </url>
     <url>
         <loc>Nonesocial-distance/</loc>
-        <lastmod>2024-04-01</lastmod>
+        <lastmod>2024-07-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonesocial-distance/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/social-distance/"/>
     </url>
     <url>
-        <loc>Nonespell-dimension-modpack/</loc>
-        <lastmod>2024-04-01</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonespell-dimension-modpack/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/spell-dimension-modpack/"/>
-    </url>
-    <url>
         <loc>Noneen/</loc>
-        <lastmod>2024-04-01</lastmod>
+        <lastmod>2024-07-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="None"/>
     </url>
     <url>
         <loc>Noneen/crystalline-ender-eye/</loc>
-        <lastmod>2024-04-01</lastmod>
+        <lastmod>2024-07-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/crystalline-ender-eye/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonecrystalline-ender-eye/"/>
     </url>
     <url>
+        <loc>Noneen/enchantment-infusion/</loc>
+        <lastmod>2024-07-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/enchantment-infusion/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="Noneenchantment-infusion/"/>
+    </url>
+    <url>
         <loc>Noneen/extra-loot/</loc>
-        <lastmod>2024-04-01</lastmod>
+        <lastmod>2024-07-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/extra-loot/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="Noneextra-loot/"/>
     </url>
     <url>
         <loc>Noneen/fusion-smithing/</loc>
-        <lastmod>2024-04-01</lastmod>
+        <lastmod>2024-07-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/fusion-smithing/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonefusion-smithing/"/>
     </url>
     <url>
         <loc>Noneen/loot-bag/</loc>
-        <lastmod>2024-04-01</lastmod>
+        <lastmod>2024-07-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/loot-bag/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="Noneloot-bag/"/>
     </url>
     <url>
         <loc>Noneen/social-distance/</loc>
-        <lastmod>2024-04-01</lastmod>
+        <lastmod>2024-07-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/social-distance/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonesocial-distance/"/>
-    </url>
-    <url>
-        <loc>Noneen/spell-dimension-modpack/</loc>
-        <lastmod>2024-04-01</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/spell-dimension-modpack/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonespell-dimension-modpack/"/>
     </url>
 </urlset>
