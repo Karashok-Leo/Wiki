@@ -82,16 +82,16 @@ The specific conditions here are:
 
 This mod adds some default recipes that are derived from Ars Nouveau, but use vanilla items instead of those in Ars Nouveau:
 
-| Original Item | Replacement    |
-| ------------- | -------------- |
-| Source Gem    | Amethyst Shard |
-| 水之精华          | 水桶             |
-| 气之精华          | 幻翼膜            |
-| 火之精华          | 烈焰弹            |
-| 防护之精华         | 金苹果            |
-| 土之精华          | 树叶             |
-| 操纵之精华         | 时钟             |
-| 荒野尖刺          | 甜浆果            |
+| Original Item        | Replacement      |
+| -------------------- | ---------------- |
+| Source Gem           | Amethyst Shard   |
+| Water Essence        | Water Bucket     |
+| Air Essence          | Phantom Membrane |
+| Fire Essence         | Fire Charge      |
+| Abjuration Essence   | Golden Apple     |
+| Earth Essence        | Leaves           |
+| Manipulation Essence | Clock            |
+| Wilden Spike         | Sweet Berries    |
 
 ## 🧩Compatibility
 
