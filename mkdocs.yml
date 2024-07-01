@@ -1,4 +1,5 @@
 site_name: Leo's Wiki
+site_url: https://karashok-leo.github.io/Wiki
 
 theme:
   name: 'material'
@@ -19,10 +20,10 @@ plugins:
   - i18n:
       docs_structure: folder
       languages:
-        - locale: zh
-          default: true
-          name: 简体中文
-          build: true
         - locale: en
+          default: true
           name: English
+          build: true
+        - locale: zh
+          name: 简体中文
           build: true
