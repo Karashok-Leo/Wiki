@@ -29,7 +29,8 @@ Contains multiple sets of loot, and you can obtain a random set of them.
 
 ## ⚙️Configuration
 
-This mod is highly configurable. The config files will be automatically generated as examples.
+~~This mod is highly configurable. The config files will be automatically generated as examples.~~
+After version 1.2.0, the entire mod underwent a thorough refactoring. Now it is data driven (mostly), and the example data pack can be found [HERE](https://github.com/Karashok-Leo/loot-bag/tree/master/example).
 
 ## ✉️Feedback
 
