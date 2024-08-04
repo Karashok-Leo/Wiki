@@ -1,5 +1,14 @@
 # Loot Bag
 
+## NOTES❗❗❗
+
+In version 1.2.0 I rewrote almost the entire mod.
+What's different from before?
+1. The mod now no longer depends on any other dependency mod other than the fabric api.
+2. It is now configured via datapack instead of config files. (Don't update if you're not ready to rewrite the config file as a datapack!)
+3. Every loot bag used to be a new item, this was done to accommodate some operations such as the vanilla recipe output that did not support writing NBT on items. But this practice was costly, introduced BRRP as a dependency, and defied conventional logic. Now all loot bags are the same item, and the loot bag data is stored in the item's NBT tag.
+4. The mod is now extensible in code, if you are a mod developer you can generate your datapack using the provider class provided by the mod and even add more loot bag types.
+
 ## 🪄Introduction
 
 Another loot bag mod, designed for modpacks.
