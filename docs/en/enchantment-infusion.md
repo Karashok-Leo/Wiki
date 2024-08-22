@@ -12,7 +12,7 @@ You need to place a enchantment infusion table (centre position) and enchantment
 
 ![image](assets/enchantment-infusion/machine.png)
 
-### 合成配方
+### Crafting Recipes
 
 ![image](assets/enchantment-infusion/recipe.png)
 
@@ -63,12 +63,12 @@ This mod adds a recipe type (`enchantment_infusion:enchantment_infusion`). The J
 
 | Field | Required | Description |
 | ----- | ----- | ----- |
-| type | Required | specify the recipe type as enchantment infusion |
-| enchantment | Required | the identifier of the target enchantment |
-| level | Required | the level of the target enchantment |
-| ingredients  | Required | the ingredients of the recipe, is up to 8, the order does not matter (this is a shapeless recipe) |
-| input | Optional | the existing enchantment needed, will be consumed when infused |
-| force | Optional | whether to ignore enchantment compatibility and force a match for the item to be enchanted, defaults to `false` |
+| `type` | Required | specify the recipe type as enchantment infusion |
+| `enchantment` | Required | the identifier of the target enchantment |
+| `level` | Required | the level of the target enchantment |
+| `ingredients`  | Required | the ingredients of the recipe, is up to 8, the order does not matter (this is a shapeless recipe) |
+| `input` | Optional | the existing enchantment needed, will be consumed when infused |
+| `force` | Optional | whether to ignore enchantment compatibility and force a match for the item to be enchanted, defaults to `false` |
 
 ### Default Recipes
 
