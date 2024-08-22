@@ -23,54 +23,52 @@
 本模组添加了一种配方类型（`enchantment_infusion:enchantment_infusion`）。配方JSON文件如下：
 
 ```
-{  
-  "type": "enchantment_infusion:enchantment_infusion",  
-  "enchantment": "minecraft:efficiency",  
-  "force": false,  
-  "ingredients": [  
-    {  
-      "item": "minecraft:redstone_block"  
-    },  
-    {  
-      "item": "minecraft:redstone_block"  
-    },  
-    {  
-      "item": "minecraft:diamond_pickaxe"  
-    },  
-    {  
-      "item": "minecraft:diamond_shovel"  
-    },  
-    {  
-      "item": "minecraft:amethyst_shard"  
-    },  
-    {  
-      "item": "minecraft:amethyst_shard"  
-    },  
-    {  
-      "item": "minecraft:lapis_block"  
-    },  
-    {  
-      "item": "minecraft:lapis_block"  
-    }  
-  ],  
-  "level": 5,  
-  "mode": "ADD"  
+{
+  "type": "enchantment_infusion:enchantment_infusion",
+  "enchantment": "minecraft:efficiency",
+  "force": false,
+  "ingredients": [
+    {
+      "item": "minecraft:redstone_block"
+    },
+    {
+      "item": "minecraft:redstone_block"
+    },
+    {
+      "item": "minecraft:diamond_pickaxe"
+    },
+    {
+      "item": "minecraft:diamond_shovel"
+    },
+    {
+      "item": "minecraft:amethyst_shard"
+    },
+    {
+      "item": "minecraft:amethyst_shard"
+    },
+    {
+      "item": "minecraft:lapis_block"
+    },
+    {
+      "item": "minecraft:lapis_block"
+    }
+  ],
+  "input": {
+    "enchantment": "minecraft:efficiency",
+    "min_level": 4
+  },
+  "level": 5
 }
 ```
 
-`enchantment`字段即魔咒的标识符；
-`level`字段即魔咒等级；
-`ingredients`字段即配方的原料，最多8个，次序不重要（这是无序配方）；
-`mode`字段即配方的模式，只能为`ADD`或者`SET`，`ADD`表示将`level-1`等级的魔咒提升至`level`级，而`SET`表示将该（小于`level`级的）魔咒设置为`level`级；
-`force`字段即是否忽略魔咒兼容性，强制匹配被附魔物品，这是一个可选字段，默认为`false`。
-
-### 匹配被附魔物品
-
-放置在魔咒灌注台上的物品需要满足特定条件，否则将提示”未找到配方“。
-
-此处的特定条件为：
-1. 当`mode`为`ADD`时，被附魔物品上必须已有`level-1`等级的指定魔咒；当`mode`为`SET`时，只需被附魔物品上的指定附魔等级小于`level`；
-2. `force`为`true`或者该魔咒兼容被附魔物品（该魔咒可以附在被附魔物品上并且不与已有附魔冲突）。
+| 配方字段 | 是否必需 | 说明 |
+| ----- | ----- | ----- |
+| type | 必需 | 指定配方类型为附魔灌注 |
+| enchantment | 必需 | 目标魔咒的标识符 |
+| level | 必需 | 魔咒等级 |
+| ingredients  | 必需 | 配方的原料，最多8个，次序不重要（这是无序配方） |
+| input | 可选 | 需要已有的魔咒，灌注时会消耗该魔咒 |
+| force | 可选 | 是否忽略魔咒兼容性，强制匹配被附魔物品，默认为`false` |
 
 ### 默认配方
 

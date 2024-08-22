@@ -23,60 +23,52 @@ You need to place a enchantment infusion table (centre position) and enchantment
 This mod adds a recipe type (`enchantment_infusion:enchantment_infusion`). The JSON file for a single recipe is as follows:
 
 ```
-{  
-  "type": "enchantment_infusion:enchantment_infusion",  
-  "enchantment": "minecraft:efficiency",  
-  "force": false,  
-  "ingredients": [  
-    {  
-      "item": "minecraft:redstone_block"  
-    },  
-    {  
-      "item": "minecraft:redstone_block"  
-    },  
-    {  
-      "item": "minecraft:diamond_pickaxe"  
-    },  
-    {  
-      "item": "minecraft:diamond_shovel"  
-    },  
-    {  
-      "item": "minecraft:amethyst_shard"  
-    },  
-    {  
-      "item": "minecraft:amethyst_shard"  
-    },  
-    {  
-      "item": "minecraft:lapis_block"  
-    },  
-    {  
-      "item": "minecraft:lapis_block"  
-    }  
-  ],  
-  "level": 5,  
-  "mode": "ADD"  
+{
+  "type": "enchantment_infusion:enchantment_infusion",
+  "enchantment": "minecraft:efficiency",
+  "force": false,
+  "ingredients": [
+    {
+      "item": "minecraft:redstone_block"
+    },
+    {
+      "item": "minecraft:redstone_block"
+    },
+    {
+      "item": "minecraft:diamond_pickaxe"
+    },
+    {
+      "item": "minecraft:diamond_shovel"
+    },
+    {
+      "item": "minecraft:amethyst_shard"
+    },
+    {
+      "item": "minecraft:amethyst_shard"
+    },
+    {
+      "item": "minecraft:lapis_block"
+    },
+    {
+      "item": "minecraft:lapis_block"
+    }
+  ],
+  "input": {
+    "enchantment": "minecraft:efficiency",
+    "min_level": 4
+  },
+  "level": 5
 }
 ```
 
-The `enchantment` field is the identifier of the enchantment;
-
-The `level` field is the level of the enchantment;
-
-The `ingredients` field, i.e. the ingredients of the recipe, is up to 8, the order does not matter (this is a shapeless recipe);
-
-The `mode` field, i.e. the enchanting mode of the recipe, can only be `ADD` or `SET`, with `ADD` meaning that a enchantment of `level-1` level will be raised to `level`, and `SET` meaning that the enchantment (which is less than `level`) will be set to `level`;
-
-The `force` field, i.e. whether to ignore enchantment compatibility and force a match for the item to be enchanted. This is an optional field and defaults to `false`.
-
-### Match the item to be enchanted
-
-The item placed on the Enchantment Infusion Table need to meet specific conditions, otherwise the message "Recipe not found" will be displayed.
-
-The specific conditions here are:
-
-1. When `mode` is `ADD`, the item to be enchanted must already has a specified enchantment of `level-1` level on it; when `mode` is `SET`, it only needs the item does not have the specified enchantment or the level is less than `level`;
-
-2. `force` is `true` or the enchantment is compatible with the item (the enchantment can be attached to the item and does not conflict with existing enchantments).
+| Field | Required | Description |
+| ----- | ----- | ----- |
+| type | Required | specify the recipe type as enchantment infusion |
+| enchantment | Required | the identifier of the target enchantment |
+| level | Required | the level of the target enchantment |
+| ingredients  | Required | the ingredients of the recipe, is up to 8, the order does not matter (this is a shapeless recipe) |
+| input | Optional | the existing enchantment needed, will be consumed when infused |
+| force | Optional | whether to ignore enchantment compatibility and force a match for the item to be enchanted, defaults to `false` |
 
 ### Default Recipes
 
