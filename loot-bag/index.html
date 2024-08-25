@@ -14,7 +14,7 @@
         <link rel="prev" href="../fusion-smithing/">
       
       
-        <link rel="next" href="../social-distance/">
+        <link rel="next" href="../loot-patcher/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -238,6 +238,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../attribute-loot-condition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Attribute Loot Condition
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../crystalline-ender-eye/" class="md-nav__link">
         
   
@@ -263,26 +283,6 @@
   
   <span class="md-ellipsis">
     Enchantment Infusion
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../extra-loot/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Extra Loot
   </span>
   
 
@@ -364,6 +364,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      NOTES❗❗❗
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
       🪄Introduction
@@ -438,6 +447,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../loot-patcher/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Loot Patcher
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../social-distance/" class="md-nav__link">
         
   
@@ -476,6 +505,15 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      NOTES❗❗❗
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#introduction" class="md-nav__link">
@@ -553,6 +591,13 @@
 
 
 <h1 id="loot-bag">Loot Bag</h1>
+<h2 id="notes">NOTES❗❗❗</h2>
+<p>In version 1.2.0 I rewrote almost the entire mod.
+What's different from before?
+1. The mod now no longer depends on any other dependency mod other than the fabric api.
+2. It is now configured via datapack instead of config files. (Don't update if you're not ready to rewrite the config file as a datapack!)
+3. Every loot bag used to be a new item, this was done to accommodate some operations such as the vanilla recipe output that did not support writing NBT on items. But this practice was costly, introduced BRRP as a dependency, and defied conventional logic. Now all loot bags are the same item, and the loot bag data is stored in the item's NBT tag.
+4. The mod is now extensible in code, if you are a mod developer you can generate your datapack using the provider class provided by the mod and even add more loot bag types.</p>
 <h2 id="introduction">🪄Introduction</h2>
 <p>Another loot bag mod, designed for modpacks.</p>
 <p><img alt="image" src="../assets/loot-bag/loot-bag.png" /></p>
@@ -568,7 +613,8 @@ Right click when sneaking to open the bag directly.</p>
 <p>Contains multiple sets of loot, and you can obtain a random set of them.</p>
 <p><img alt="image" src="../assets/loot-bag/random.gif" /></p>
 <h2 id="configuration">⚙️Configuration</h2>
-<p>This mod is highly configurable. The config files will be automatically generated as examples.</p>
+<p>~~This mod is highly configurable. The config files will be automatically generated as examples.~~
+After version 1.2.0, the entire mod underwent a thorough refactoring. Now it is data driven (mostly), and the example data pack can be found <a href="https://github.com/Karashok-Leo/loot-bag/tree/master/example">HERE</a>.</p>
 <h2 id="feedback">✉️Feedback</h2>
 <p>If there are any bugs or suggestions, please provide feedback to the issue page.</p>
 

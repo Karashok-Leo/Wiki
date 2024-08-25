@@ -14,7 +14,7 @@
         <link rel="prev" href="../crystalline-ender-eye/">
       
       
-        <link rel="next" href="../extra-loot/">
+        <link rel="next" href="../fusion-smithing/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -238,6 +238,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../attribute-loot-condition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Attribute Loot Condition
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../crystalline-ender-eye/" class="md-nav__link">
         
   
@@ -323,9 +343,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#crafting-recipes" class="md-nav__link">
     <span class="md-ellipsis">
-      合成配方
+      Crafting Recipes
     </span>
   </a>
   
@@ -350,15 +370,6 @@
   <a href="#new-recipe-type" class="md-nav__link">
     <span class="md-ellipsis">
       New Recipe Type
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#match-the-item-to-be-enchanted" class="md-nav__link">
-    <span class="md-ellipsis">
-      Match the item to be enchanted
     </span>
   </a>
   
@@ -426,26 +437,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../extra-loot/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Extra Loot
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../fusion-smithing/" class="md-nav__link">
         
   
@@ -471,6 +462,26 @@
   
   <span class="md-ellipsis">
     Loot Bag
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../loot-patcher/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Loot Patcher
   </span>
   
 
@@ -545,9 +556,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#crafting-recipes" class="md-nav__link">
     <span class="md-ellipsis">
-      合成配方
+      Crafting Recipes
     </span>
   </a>
   
@@ -572,15 +583,6 @@
   <a href="#new-recipe-type" class="md-nav__link">
     <span class="md-ellipsis">
       New Recipe Type
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#match-the-item-to-be-enchanted" class="md-nav__link">
-    <span class="md-ellipsis">
-      Match the item to be enchanted
     </span>
   </a>
   
@@ -655,61 +657,89 @@
 <p>Two new blocks have been added to: the Enchantment Infusion Table and the Enchantment Infusion Pedestal. Use item to right-click them to put it in, and empty-handed right-click to remove item from them.</p>
 <p>You need to place a enchantment infusion table (centre position) and enchantment infusion pedestals (surrounding position) like the picture below, then place the corresponding items on the pedestals according to the recipe (the order doesn't matter), and finally place the item you want to enchant on the infusion table in the centre, and wait for seconds for it to finish enchanting.</p>
 <p><img alt="image" src="../assets/enchantment-infusion/machine.png" /></p>
-<h3 id="_1">合成配方</h3>
+<h3 id="crafting-recipes">Crafting Recipes</h3>
 <p><img alt="image" src="../assets/enchantment-infusion/recipe.png" /></p>
 <h2 id="recipe">🪚Recipe</h2>
 <h3 id="new-recipe-type">New Recipe Type</h3>
 <p>This mod adds a recipe type (<code>enchantment_infusion:enchantment_infusion</code>). The JSON file for a single recipe is as follows:</p>
-<pre><code>{  
-  &quot;type&quot;: &quot;enchantment_infusion:enchantment_infusion&quot;,  
-  &quot;enchantment&quot;: &quot;minecraft:efficiency&quot;,  
-  &quot;force&quot;: false,  
-  &quot;ingredients&quot;: [  
-    {  
-      &quot;item&quot;: &quot;minecraft:redstone_block&quot;  
-    },  
-    {  
-      &quot;item&quot;: &quot;minecraft:redstone_block&quot;  
-    },  
-    {  
-      &quot;item&quot;: &quot;minecraft:diamond_pickaxe&quot;  
-    },  
-    {  
-      &quot;item&quot;: &quot;minecraft:diamond_shovel&quot;  
-    },  
-    {  
-      &quot;item&quot;: &quot;minecraft:amethyst_shard&quot;  
-    },  
-    {  
-      &quot;item&quot;: &quot;minecraft:amethyst_shard&quot;  
-    },  
-    {  
-      &quot;item&quot;: &quot;minecraft:lapis_block&quot;  
-    },  
-    {  
-      &quot;item&quot;: &quot;minecraft:lapis_block&quot;  
-    }  
-  ],  
-  &quot;level&quot;: 5,  
-  &quot;mode&quot;: &quot;ADD&quot;  
+<pre><code>{
+  &quot;type&quot;: &quot;enchantment_infusion:enchantment_infusion&quot;,
+  &quot;enchantment&quot;: &quot;minecraft:efficiency&quot;,
+  &quot;force&quot;: false,
+  &quot;ingredients&quot;: [
+    {
+      &quot;item&quot;: &quot;minecraft:redstone_block&quot;
+    },
+    {
+      &quot;item&quot;: &quot;minecraft:redstone_block&quot;
+    },
+    {
+      &quot;item&quot;: &quot;minecraft:diamond_pickaxe&quot;
+    },
+    {
+      &quot;item&quot;: &quot;minecraft:diamond_shovel&quot;
+    },
+    {
+      &quot;item&quot;: &quot;minecraft:amethyst_shard&quot;
+    },
+    {
+      &quot;item&quot;: &quot;minecraft:amethyst_shard&quot;
+    },
+    {
+      &quot;item&quot;: &quot;minecraft:lapis_block&quot;
+    },
+    {
+      &quot;item&quot;: &quot;minecraft:lapis_block&quot;
+    }
+  ],
+  &quot;input&quot;: {
+    &quot;enchantment&quot;: &quot;minecraft:efficiency&quot;,
+    &quot;min_level&quot;: 4
+  },
+  &quot;level&quot;: 5
 }
 </code></pre>
-<p>The <code>enchantment</code> field is the identifier of the enchantment;</p>
-<p>The <code>level</code> field is the level of the enchantment;</p>
-<p>The <code>ingredients</code> field, i.e. the ingredients of the recipe, is up to 8, the order does not matter (this is a shapeless recipe);</p>
-<p>The <code>mode</code> field, i.e. the enchanting mode of the recipe, can only be <code>ADD</code> or <code>SET</code>, with <code>ADD</code> meaning that a enchantment of <code>level-1</code> level will be raised to <code>level</code>, and <code>SET</code> meaning that the enchantment (which is less than <code>level</code>) will be set to <code>level</code>;</p>
-<p>The <code>force</code> field, i.e. whether to ignore enchantment compatibility and force a match for the item to be enchanted. This is an optional field and defaults to <code>false</code>.</p>
-<h3 id="match-the-item-to-be-enchanted">Match the item to be enchanted</h3>
-<p>The item placed on the Enchantment Infusion Table need to meet specific conditions, otherwise the message "Recipe not found" will be displayed.</p>
-<p>The specific conditions here are:</p>
-<ol>
-<li>
-<p>When <code>mode</code> is <code>ADD</code>, the item to be enchanted must already has a specified enchantment of <code>level-1</code> level on it; when <code>mode</code> is <code>SET</code>, it only needs the item does not have the specified enchantment or the level is less than <code>level</code>;</p>
-</li>
-<li>
-<p><code>force</code> is <code>true</code> or the enchantment is compatible with the item (the enchantment can be attached to the item and does not conflict with existing enchantments).</p>
-</li>
-</ol>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>type</code></td>
+<td>Required</td>
+<td>specify the recipe type as enchantment infusion</td>
+</tr>
+<tr>
+<td><code>enchantment</code></td>
+<td>Required</td>
+<td>the identifier of the target enchantment</td>
+</tr>
+<tr>
+<td><code>level</code></td>
+<td>Required</td>
+<td>the level of the target enchantment</td>
+</tr>
+<tr>
+<td><code>ingredients</code></td>
+<td>Required</td>
+<td>the ingredients of the recipe, is up to 8, the order does not matter (this is a shapeless recipe)</td>
+</tr>
+<tr>
+<td><code>input</code></td>
+<td>Optional</td>
+<td>the existing enchantment needed, will be consumed when infused</td>
+</tr>
+<tr>
+<td><code>force</code></td>
+<td>Optional</td>
+<td>whether to ignore enchantment compatibility and force a match for the item to be enchanted, defaults to <code>false</code></td>
+</tr>
+</tbody>
+</table>
 <h3 id="default-recipes">Default Recipes</h3>
 <p>This mod adds some default recipes that are derived from Ars Nouveau, but use vanilla items instead of those in Ars Nouveau:</p>
 <table>

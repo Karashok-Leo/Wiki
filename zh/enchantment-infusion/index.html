@@ -14,7 +14,7 @@
         <link rel="prev" href="../crystalline-ender-eye/">
       
       
-        <link rel="next" href="../extra-loot/">
+        <link rel="next" href="../fusion-smithing/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -238,6 +238,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../attribute-loot-condition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    属性战利品条件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../crystalline-ender-eye/" class="md-nav__link">
         
   
@@ -358,15 +378,6 @@
           <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
-      匹配被附魔物品
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
       默认配方
     </span>
   </a>
@@ -379,7 +390,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       🧩兼容
     </span>
@@ -388,7 +399,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       ✉️反馈
     </span>
@@ -398,7 +409,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
       关于模型与纹理
     </span>
@@ -415,26 +426,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../extra-loot/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    额外战利品
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -471,6 +462,26 @@
   
   <span class="md-ellipsis">
     战利品袋
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../loot-patcher/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    额外战利品
   </span>
   
 
@@ -580,15 +591,6 @@
           <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
-      匹配被附魔物品
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
       默认配方
     </span>
   </a>
@@ -601,7 +603,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       🧩兼容
     </span>
@@ -610,7 +612,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       ✉️反馈
     </span>
@@ -620,7 +622,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
       关于模型与纹理
     </span>
@@ -660,51 +662,85 @@
 <h2 id="_5">🪚配方</h2>
 <h3 id="_6">新的配方类型</h3>
 <p>本模组添加了一种配方类型（<code>enchantment_infusion:enchantment_infusion</code>）。配方JSON文件如下：</p>
-<pre><code>{  
-  &quot;type&quot;: &quot;enchantment_infusion:enchantment_infusion&quot;,  
-  &quot;enchantment&quot;: &quot;minecraft:efficiency&quot;,  
-  &quot;force&quot;: false,  
-  &quot;ingredients&quot;: [  
-    {  
-      &quot;item&quot;: &quot;minecraft:redstone_block&quot;  
-    },  
-    {  
-      &quot;item&quot;: &quot;minecraft:redstone_block&quot;  
-    },  
-    {  
-      &quot;item&quot;: &quot;minecraft:diamond_pickaxe&quot;  
-    },  
-    {  
-      &quot;item&quot;: &quot;minecraft:diamond_shovel&quot;  
-    },  
-    {  
-      &quot;item&quot;: &quot;minecraft:amethyst_shard&quot;  
-    },  
-    {  
-      &quot;item&quot;: &quot;minecraft:amethyst_shard&quot;  
-    },  
-    {  
-      &quot;item&quot;: &quot;minecraft:lapis_block&quot;  
-    },  
-    {  
-      &quot;item&quot;: &quot;minecraft:lapis_block&quot;  
-    }  
-  ],  
-  &quot;level&quot;: 5,  
-  &quot;mode&quot;: &quot;ADD&quot;  
+<pre><code>{
+  &quot;type&quot;: &quot;enchantment_infusion:enchantment_infusion&quot;,
+  &quot;enchantment&quot;: &quot;minecraft:efficiency&quot;,
+  &quot;force&quot;: false,
+  &quot;ingredients&quot;: [
+    {
+      &quot;item&quot;: &quot;minecraft:redstone_block&quot;
+    },
+    {
+      &quot;item&quot;: &quot;minecraft:redstone_block&quot;
+    },
+    {
+      &quot;item&quot;: &quot;minecraft:diamond_pickaxe&quot;
+    },
+    {
+      &quot;item&quot;: &quot;minecraft:diamond_shovel&quot;
+    },
+    {
+      &quot;item&quot;: &quot;minecraft:amethyst_shard&quot;
+    },
+    {
+      &quot;item&quot;: &quot;minecraft:amethyst_shard&quot;
+    },
+    {
+      &quot;item&quot;: &quot;minecraft:lapis_block&quot;
+    },
+    {
+      &quot;item&quot;: &quot;minecraft:lapis_block&quot;
+    }
+  ],
+  &quot;input&quot;: {
+    &quot;enchantment&quot;: &quot;minecraft:efficiency&quot;,
+    &quot;min_level&quot;: 4
+  },
+  &quot;level&quot;: 5
 }
 </code></pre>
-<p><code>enchantment</code>字段即魔咒的标识符；
-<code>level</code>字段即魔咒等级；
-<code>ingredients</code>字段即配方的原料，最多8个，次序不重要（这是无序配方）；
-<code>mode</code>字段即配方的模式，只能为<code>ADD</code>或者<code>SET</code>，<code>ADD</code>表示将<code>level-1</code>等级的魔咒提升至<code>level</code>级，而<code>SET</code>表示将该（小于<code>level</code>级的）魔咒设置为<code>level</code>级；
-<code>force</code>字段即是否忽略魔咒兼容性，强制匹配被附魔物品，这是一个可选字段，默认为<code>false</code>。</p>
-<h3 id="_7">匹配被附魔物品</h3>
-<p>放置在魔咒灌注台上的物品需要满足特定条件，否则将提示”未找到配方“。</p>
-<p>此处的特定条件为：
-1. 当<code>mode</code>为<code>ADD</code>时，被附魔物品上必须已有<code>level-1</code>等级的指定魔咒；当<code>mode</code>为<code>SET</code>时，只需被附魔物品上的指定附魔等级小于<code>level</code>；
-2. <code>force</code>为<code>true</code>或者该魔咒兼容被附魔物品（该魔咒可以附在被附魔物品上并且不与已有附魔冲突）。</p>
-<h3 id="_8">默认配方</h3>
+<table>
+<thead>
+<tr>
+<th>配方字段</th>
+<th>是否必需</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>必需</td>
+<td>指定配方类型为附魔灌注</td>
+</tr>
+<tr>
+<td>enchantment</td>
+<td>必需</td>
+<td>目标魔咒的标识符</td>
+</tr>
+<tr>
+<td>level</td>
+<td>必需</td>
+<td>魔咒等级</td>
+</tr>
+<tr>
+<td>ingredients</td>
+<td>必需</td>
+<td>配方的原料，最多8个，次序不重要（这是无序配方）</td>
+</tr>
+<tr>
+<td>input</td>
+<td>可选</td>
+<td>需要已有的魔咒，灌注时会消耗该魔咒</td>
+</tr>
+<tr>
+<td>force</td>
+<td>可选</td>
+<td>是否忽略魔咒兼容性，强制匹配被附魔物品，默认为<code>false</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_7">默认配方</h3>
 <p>本模组添加了一些默认配方，这些配方来源于新生魔艺，但使用了原版物品取代了新生魔艺中的物品：</p>
 <table>
 <thead>
@@ -748,12 +784,12 @@
 </tr>
 </tbody>
 </table>
-<h2 id="_9">🧩兼容</h2>
+<h2 id="_8">🧩兼容</h2>
 <p>本模组内置了REI和EMI的兼容插件，你可以使用两者之一查看本模组的所有配方。</p>
-<h2 id="_10">✉️反馈</h2>
+<h2 id="_9">✉️反馈</h2>
 <p>这个模组还没有经过完备的测试，所以目前仍处于Beta阶段。</p>
 <p>如果有任何Bug或建议，请反馈到Github的Issue页面。</p>
-<h3 id="_11">关于模型与纹理</h3>
+<h3 id="_10">关于模型与纹理</h3>
 <p>作者：我不擅长美术😫，所以两个新方块的模型与纹理看起来有些劣质，如果你有兴趣为它们制作新的模型和纹理，请联系我！感谢！🥰🥰🥰</p>
 
 

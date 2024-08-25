@@ -14,7 +14,7 @@
         <link rel="prev" href="../fusion-smithing/">
       
       
-        <link rel="next" href="../social-distance/">
+        <link rel="next" href="../loot-patcher/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -238,6 +238,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../attribute-loot-condition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    属性战利品条件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../crystalline-ender-eye/" class="md-nav__link">
         
   
@@ -263,26 +283,6 @@
   
   <span class="md-ellipsis">
     魔咒灌注
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../extra-loot/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    额外战利品
   </span>
   
 
@@ -366,6 +366,15 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
+      注意❗❗❗
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
       🪄介绍
     </span>
   </a>
@@ -374,7 +383,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       (单项) 战利品袋
     </span>
@@ -383,7 +392,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       可选战利品袋
     </span>
@@ -392,7 +401,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       随机战利品袋
     </span>
@@ -406,7 +415,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       ⚙️配置
     </span>
@@ -415,7 +424,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       ✉️反馈
     </span>
@@ -427,6 +436,26 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../loot-patcher/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    额外战利品
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -480,6 +509,15 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
+      注意❗❗❗
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
       🪄介绍
     </span>
   </a>
@@ -488,7 +526,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       (单项) 战利品袋
     </span>
@@ -497,7 +535,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       可选战利品袋
     </span>
@@ -506,7 +544,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       随机战利品袋
     </span>
@@ -520,7 +558,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       ⚙️配置
     </span>
@@ -529,7 +567,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       ✉️反馈
     </span>
@@ -553,23 +591,31 @@
 
 
 <h1 id="_1">战利品袋</h1>
-<h2 id="_2">🪄介绍</h2>
+<h2 id="_2">注意❗❗❗</h2>
+<p>1.2.0版本，我几乎重写了整个模组。
+与之前有什么不同？
+1. 现在该模组不再依赖于除了Fabric API以外的其他前置模组。
+2. 现在通过数据包配置而不是配置文件。（如果你还没有做好将配置文件重写为数据包的准备，请不要更新！）
+3. 在以前每一个战利品袋都是一种新物品，这样做是为了适应原版配方输出等一些不支持在物品上写入NBT的操作。但这种做法是代价巨大的，引入了BRRP作为前置，而且违背常规逻辑。现在所有战利品袋都是同一种物品，战利品袋的数据存储在物品的NBT标签中。
+4. 现在模组在代码上是拓展性良好的，如果你是模组开发者，你可以使用模组提供的Provider类进行数据生成，甚至添加更多的战利品袋种类。</p>
+<h2 id="_3">🪄介绍</h2>
 <p>又一个战利品袋模组，为魔改而生。</p>
 <p><img alt="image" src="../../assets/loot-bag/loot-bag.png" /></p>
 <p>右键打开一个预览屏幕。
 潜行右键直接打开战利品袋。</p>
-<h3 id="_3">(单项) 战利品袋</h3>
+<h3 id="_4">(单项) 战利品袋</h3>
 <p>包含单组战利品。</p>
 <p><img alt="image" src="../../assets/loot-bag/single.png" /></p>
-<h3 id="_4">可选战利品袋</h3>
+<h3 id="_5">可选战利品袋</h3>
 <p>包含多组战利品，你可以选择获取其中一组。</p>
 <p><img alt="image" src="../../assets/loot-bag/optional.gif" /></p>
-<h3 id="_5">随机战利品袋</h3>
+<h3 id="_6">随机战利品袋</h3>
 <p>包含多组战利品，你可以获取其中随机一组。</p>
 <p><img alt="image" src="../../assets/loot-bag/random.gif" /></p>
-<h2 id="_6">⚙️配置</h2>
-<p>这个模组是高度可配置的，作为示例的配置文件会自动生成。</p>
-<h2 id="_7">✉️反馈</h2>
+<h2 id="_7">⚙️配置</h2>
+<p>~~这个模组是高度可配置的，作为示例的配置文件会自动生成。~~
+版本1.2.0之后整个项目彻底重构，现在模组的大部分内容都是数据驱动的，你可以在<a href="https://github.com/Karashok-Leo/loot-bag/tree/master/example">这里</a>找到示例数据包。</p>
+<h2 id="_8">✉️反馈</h2>
 <p>如果有任何Bug或建议，请反馈到Github的Issue页面。</p>
 
 
