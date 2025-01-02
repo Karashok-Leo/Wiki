@@ -4,6 +4,12 @@
 
 [官方Wiki / Official Wiki](https://karashok-leo.github.io/Wiki/zh/spell-dimension/)
 
+[CurseForge页面 / CurseForge Page](https://www.curseforge.com/minecraft/modpacks/spell-dimension)
+
+[MCMOD页面 / MCMOD Page](https://www.mcmod.cn/modpack/1024.html)
+
+[BBSMC页面 / BBSMC Page](https://bbsmc.net/modpack/spell-dimension)
+
 [Github仓库 / Github Repository](https://github.com/Karashok-Leo/Spell-Dimension-Modpack)
 
 [预览宣传片 / Promotional Video](https://www.bilibili.com/video/BV1sZ42117eN)
