@@ -12,9 +12,13 @@
 
 [Github仓库 / Github Repository](https://github.com/Karashok-Leo/Spell-Dimension-Modpack)
 
+[夸克网盘 / Quark Pan](https://pan.quark.cn/s/e6646cd73cec)
+
 [预览宣传片 / Promotional Video](https://www.bilibili.com/video/BV1sZ42117eN)
 
 [发布宣传片 / Release Video](https://www.bilibili.com/video/BV1QN6HYnE5W)
+
+[一键开服 / Make a Server](mc.flowersidc.cn/) *- 整合包专属优惠码:* `ZCY`
 
 ### 文档目录 / Document Directory
 
