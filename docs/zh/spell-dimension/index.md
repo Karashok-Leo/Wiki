@@ -18,7 +18,7 @@
 
 [发布宣传片 / Release Video](https://www.bilibili.com/video/BV1QN6HYnE5W)
 
-[一键开服 / Make a Server](mc.flowersidc.cn/) *- 整合包专属优惠码:* `ZCY`
+[一键开服 / Make a Server](http://mc.flowersidc.cn/) *- 整合包专属优惠码:* `ZCY`
 
 ### 文档目录 / Document Directory
 
