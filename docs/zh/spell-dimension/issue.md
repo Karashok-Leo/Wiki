@@ -1,7 +1,7 @@
 # 已知问题 / Known Issues
 
-- 在末地引爆手动放置的末地水晶可以对龙造成伤害
-    - [相关链接](https://github.com/someaddons/SavageEnderDragon/issues/61)
+- 结构`simply_houses:taiga_inn`的箱子尝试生成不存在的战利品表`luna_structures:chests/taiga_inn/taiga_inn_barrels`
+    - [相关链接](https://github.com/Aureljz/SimplyHouses-Forge/issues/3)
 - Trinkets崩端
     - 复现步骤: 
         1. 在护符栏位上装备抢夺宝珠A, 添加了一个护符栏位
