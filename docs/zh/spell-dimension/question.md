@@ -12,3 +12,18 @@
     - 答：这不是铁魔法，而是[法术引擎/Spell Engine](https://www.curseforge.com/minecraft/mc-mods/spell-engine)以及它的一些附属模组。
 - 问：能否增加FTB任务?没有FTB任务游玩时感到迷茫怎么办?
     - 答：不可能，我已经因为FTB任务的臃肿、性能和本地化问题而放弃了它，作为替代，我独立实现了一套任务系统。另外，游戏的指导文本可以在内置的指导书籍内查阅，任务不起主要指导作用。如果你觉得使用体验比不上FTB任务，欢迎你来提出建议。
+- 问：如果我想要拥有更好的性能优化，可以删除哪些模组？
+    - 答：以下为可去掉且不影响游戏内容的模组文件名称及其作用：
+        1. FancyBlockParticles - 立体方块粒子效果
+        2. ItemBorders - 物品边框样式
+        3. LegendaryTooltips - 物品提示框样式
+        4. a_good_place - 方块放置动画
+        5. Continuity - 方块连续材质
+        7. wakes - 水花动画
+        8. visuality - 额外粒子效果
+        9. TravelersTitles - 群系标题
+        10. smoothswapping - 物品移动动画
+        11. make_bubbles_pop - 泡泡破裂动画
+        12. chunksfadein - 区块加载渐入动画
+        13. CustomTotemParticles - 不死图腾粒子效果
+        14. PickUpNotifier - 物品拾取提示
