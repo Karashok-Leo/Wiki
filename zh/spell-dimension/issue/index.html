@@ -487,6 +487,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    已知问题 / Known Issues
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -496,6 +507,43 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#unsolved" class="md-nav__link">
+    <span class="md-ellipsis">
+      未解决 / Unsolved
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solved" class="md-nav__link">
+    <span class="md-ellipsis">
+      已解决 / Solved
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -571,6 +619,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#unsolved" class="md-nav__link">
+    <span class="md-ellipsis">
+      未解决 / Unsolved
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solved" class="md-nav__link">
+    <span class="md-ellipsis">
+      已解决 / Solved
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -585,9 +659,39 @@
 
 
 <h1 id="known-issues">已知问题 / Known Issues</h1>
+<h2 id="unsolved">未解决 / Unsolved</h2>
 <ul>
+<li>地牢维度无法主动退出</li>
 <li>结构<code>simply_houses:taiga_inn</code>的箱子尝试生成不存在的战利品表<code>luna_structures:chests/taiga_inn/taiga_inn_barrels</code><ul>
 <li><a href="https://github.com/Aureljz/SimplyHouses-Forge/issues/3">相关链接</a></li>
+</ul>
+</li>
+<li>结构箱子尝试生成不存在的战利品表<code>ati_structures:chests/archer_chest1</code><ul>
+<li><a href="https://legacy.curseforge.com/minecraft/mc-mods/ati-structures/issues/5">相关链接</a></li>
+</ul>
+</li>
+<li>Trinkets属性修饰符更新问题<ul>
+<li>取出带有额外槽位的饰品后，额外槽位中的饰品虽然会弹出，但已经添加的临时属性修饰符不会被移除</li>
+</ul>
+</li>
+<li>部分实体锁血？<ul>
+<li>原因不明</li>
+</ul>
+</li>
+<li>未知来源的大量黄心<ul>
+<li><del>疑似原因为治疗之环，也许已在0.5.3版本修复</del></li>
+<li>原因仍然未知</li>
+</ul>
+</li>
+<li>附魔<strong>盔甲耐久</strong>无效<ul>
+<li><a href="https://github.com/LangYueMc/EquipmentStandard/pull/13">相关链接</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="solved">已解决 / Solved</h2>
+<ul>
+<li>共振羽毛(破魔掉落)难以获得<ul>
+<li>已尝试在0.5.5版本中修复，通过调整破魔和法术穿透的机制</li>
 </ul>
 </li>
 <li>Trinkets崩端<ul>
@@ -600,19 +704,6 @@
 </li>
 <li><a href="https://github.com/emilyploszaj/trinkets/issues/361">相关链接</a></li>
 <li>已尝试在0.5.5版本中修复</li>
-</ul>
-</li>
-<li>未知来源的大量黄心<ul>
-<li><del>疑似原因为治疗之环，也许已在0.5.3版本修复</del></li>
-<li>原因仍然未知</li>
-</ul>
-</li>
-<li>共振羽毛(破魔掉落)难以获得<ul>
-<li>已尝试在0.5.5版本中修复，通过调整破魔和法术穿透的机制</li>
-</ul>
-</li>
-<li>附魔<strong>盔甲耐久</strong>无效<ul>
-<li><a href="https://github.com/LangYueMc/EquipmentStandard/pull/13">相关链接</a></li>
 </ul>
 </li>
 </ul>
