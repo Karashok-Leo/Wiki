@@ -24,6 +24,5 @@
 
 - [介绍 / Introduction](introduction.md)
 - [常见问题 / FAQ](question.md)
-- [已知问题 / Known Issues](issue.md)
 - [计划 / Plan](plan.md)
 - [更新日志 / Changelog](changelog.md)
