@@ -367,9 +367,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#new-recipe-type" class="md-nav__link">
+  <a href="#enchantment-infusion_1" class="md-nav__link">
     <span class="md-ellipsis">
-      New Recipe Type
+      Enchantment Infusion
     </span>
   </a>
   
@@ -379,6 +379,15 @@
   <a href="#default-recipes" class="md-nav__link">
     <span class="md-ellipsis">
       Default Recipes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simple-infusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simple Infusion
     </span>
   </a>
   
@@ -404,21 +413,6 @@
       ✉️Feedback
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="✉️Feedback">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#about-models-and-textures" class="md-nav__link">
-    <span class="md-ellipsis">
-      About models and textures
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -580,9 +574,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#new-recipe-type" class="md-nav__link">
+  <a href="#enchantment-infusion_1" class="md-nav__link">
     <span class="md-ellipsis">
-      New Recipe Type
+      Enchantment Infusion
     </span>
   </a>
   
@@ -592,6 +586,15 @@
   <a href="#default-recipes" class="md-nav__link">
     <span class="md-ellipsis">
       Default Recipes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simple-infusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simple Infusion
     </span>
   </a>
   
@@ -618,21 +621,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="✉️Feedback">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#about-models-and-textures" class="md-nav__link">
-    <span class="md-ellipsis">
-      About models and textures
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
@@ -655,12 +643,12 @@
 <p>This mod adds a directional enchanting method, inspired by the Enchanting Apparatus recipes from <a href="https://www.curseforge.com/minecraft/mc-mods/ars-nouveau">Ars Nouveau</a>.</p>
 <h3 id="how-to-enchant">How to enchant ?</h3>
 <p>Two new blocks have been added to: the Enchantment Infusion Table and the Enchantment Infusion Pedestal. Use item to right-click them to put it in, and empty-handed right-click to remove item from them.</p>
-<p>You need to place a enchantment infusion table (centre position) and enchantment infusion pedestals (surrounding position) like the picture below, then place the corresponding items on the pedestals according to the recipe (the order doesn't matter), and finally place the item you want to enchant on the infusion table in the centre, and wait for seconds for it to finish enchanting.</p>
+<p>You need to place an enchantment infusion table (centre position) and enchantment infusion pedestals (surrounding position) like the picture below, then place the corresponding items on the pedestals according to the recipe (the order doesn't matter), and finally place the item you want to enchant on the infusion table in the centre, and wait for seconds for it to finish enchanting.</p>
 <p><img alt="image" src="../assets/enchantment-infusion/machine.png" /></p>
 <h3 id="crafting-recipes">Crafting Recipes</h3>
 <p><img alt="image" src="../assets/enchantment-infusion/recipe.png" /></p>
 <h2 id="recipe">🪚Recipe</h2>
-<h3 id="new-recipe-type">New Recipe Type</h3>
+<h3 id="enchantment-infusion_1">Enchantment Infusion</h3>
 <p>This mod adds a recipe type (<code>enchantment_infusion:enchantment_infusion</code>). The JSON file for a single recipe is as follows:</p>
 <pre><code>{
   &quot;type&quot;: &quot;enchantment_infusion:enchantment_infusion&quot;,
@@ -784,13 +772,70 @@
 </tr>
 </tbody>
 </table>
+<h3 id="simple-infusion">Simple Infusion</h3>
+<p>Since mod version <code>1.2.0</code>, a new recipe type (<code>enchantment_infusion:simple_infusion</code>) has been added. The JSON file for a single recipe is as follows:</p>
+<pre><code>{
+  &quot;type&quot;: &quot;enchantment_infusion:simple_infusion&quot;,
+  &quot;ingredients&quot;: [
+    {
+      &quot;item&quot;: &quot;minecraft:redstone&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;spell-dimension:essence/0&quot;
+    }
+  ],
+  &quot;input&quot;: {
+    &quot;item&quot;: &quot;minecraft:leather_boots&quot;,
+    &quot;min_level&quot;: 4
+  },
+  &quot;output&quot;: {
+    &quot;Count&quot;: 1,
+    &quot;id&quot;: &quot;artifacts:running_shoes&quot;
+  },
+  &quot;copy_nbt&quot;: false
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>Required</td>
+<td>specify the recipe type as simple infusion</td>
+</tr>
+<tr>
+<td>ingredients</td>
+<td>Required</td>
+<td>the ingredients of the recipe, is up to 8, the order does not matter (this is a shapeless recipe)</td>
+</tr>
+<tr>
+<td>input</td>
+<td>Required</td>
+<td>input ingredient for the central infusion table</td>
+</tr>
+<tr>
+<td>output</td>
+<td>Required</td>
+<td>output item</td>
+</tr>
+<tr>
+<td>copy_nbt</td>
+<td>Optional</td>
+<td>whether or not to copy the NBT of the input item in the central infusion table to the output item, defaults to <code>true</code>.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="compatibility">🧩Compatibility</h2>
 <p>This mod has built-in REI and EMI compatible plug-ins, which means you can use either to view all recipes in this mod.</p>
 <h2 id="feedback">✉️Feedback</h2>
 <p>This mod has not been fully tested yet, so it is still in Beta.</p>
 <p>If there are any bugs or suggestions, please provide feedback to the issue page.</p>
-<h3 id="about-models-and-textures">About models and textures</h3>
-<p>AUTHOR: I'm not good at art 😫 so the models and textures for the two new blocks look a bit shoddy, if you're interested in making new models and textures for them, please contact me! Thanks! 🥰🥰🥰🥰.</p>
 
 
 
