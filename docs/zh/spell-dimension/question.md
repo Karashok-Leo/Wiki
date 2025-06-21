@@ -12,21 +12,31 @@
     - 答：这不是铁魔法，而是[法术引擎/Spell Engine](https://www.curseforge.com/minecraft/mc-mods/spell-engine)以及它的一些附属模组。
 - 问：能否增加FTB任务?没有FTB任务游玩时感到迷茫怎么办?
     - 答：不可能，我已经因为FTB任务的臃肿、性能和本地化问题而放弃了它，作为替代，我独立实现了一套任务系统。另外，游戏的指导文本可以在内置的指导书籍内查阅，任务不起主要指导作用。如果你觉得使用体验比不上FTB任务，欢迎你来提出建议。
-- 问：如果我想要拥有更好的性能优化，可以删除哪些模组？
-    - 答：以下为可去掉且不影响游戏内容的模组文件名称及其作用，0.6.2以后我发布了Lite版，也就是去掉以下这些模组的适用于低配电脑的版本。
-        1. PickUpNotifier - 物品拾取提示
-        2. ItemBorders - 物品边框样式
-        3. LegendaryTooltips - 物品提示框样式
-        4. a_good_place - 方块放置动画
-        5. Continuity - 方块连续材质
-        7. wakes - 水花动画
-        8. visuality - 额外粒子效果
-        9. TravelersTitles - 群系标题
-        10. smoothswapping - 物品移动动画
-        11. make_bubbles_pop - 泡泡破裂动画
-        12. chunksfadein - 区块加载渐入动画
-        13. CustomTotemParticles - 不死图腾粒子效果
-- 问：怎么进入地牢？为何提示缺少物品？
-    - 答：右键地牢传送门即可看到进入地牢所需的物品。
-- 问：为什么破坏方块以后产生的粒子冻结在原地不动了？
+- 问：如果我想要拥有更好的性能优化，可以怎么做？
+    - 答：*性能的提升总是以牺牲体验为代价。*
+        - 可供参考的资料[Performance Guide (prominence.wiki)](https://rpg.prominence.wiki/performance-guide)，感谢Prominence制作组提供的指导
+        - 可采取的措施：
+            - 禁用光影或者调整光影配置
+            - 降低渲染距离、最大阴影距离、模拟距离
+            - 降低分辨率
+            - 启用全屏
+            - 预生成区块（*Chunky*模组）
+            - 删除或禁用一些模组，以下为可去掉且不影响游戏内容的模组文件名称及其作用。0.6.4不再发布Lite版，这是因为整合包中对性能影响最大的模组Fancy Block Particles已经移除。
+                - PickUpNotifier - 物品拾取提示
+                - ItemBorders - 物品边框样式
+                - LegendaryTooltips - 物品提示框样式
+                - a_good_place - 方块放置动画
+                - Continuity - 方块连续材质
+                - wakes - 水花动画
+                - visuality - 额外粒子效果
+                - TravelersTitles - 群系标题
+                - smoothswapping - 物品移动动画
+                - make_bubbles_pop - 泡泡破裂动画
+                - chunksfadein - 区块加载渐入动画
+                - CustomTotemParticles - 不死图腾粒子效果
+                - FiltPick - 拾取筛
+                - sparsestructures - 密集结构生成
+- 问：怎么进入地牢？为何提示缺少物品？怎么退出地牢？
+    - 答：右键地牢传送门即可看到进入地牢所需的物品。输入指令`/dungeon leave`即可退出地牢。
+- 问：为什么破坏方块以后产生的粒子冻结在原地不动了？（已过时，0.6.4版本Fancy Block Particles已移除）
     - 答：尝试按R恢复，建议以正确的方法重新安装整合包，因为你的按键预设没有应用上，如果应用上了调整后的按键设置，按R应该是战术翻滚。
