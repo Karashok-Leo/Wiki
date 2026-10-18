@@ -377,6 +377,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#versions-and-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Versions and Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#how-to-enchant" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -630,6 +641,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#versions-and-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Versions and Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#how-to-enchant" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -748,6 +770,44 @@
 <h1 id="enchantment-infusion">Enchantment Infusion</h1>
 <h2 id="introduction">🪄Introduction</h2>
 <p>This mod adds a directional enchanting method, inspired by the Enchanting Apparatus recipes from <a href="https://www.curseforge.com/minecraft/mc-mods/ars-nouveau">Ars Nouveau</a>.</p>
+<h3 id="versions-and-installation">Versions and Installation</h3>
+<table>
+<thead>
+<tr>
+<th>Minecraft</th>
+<th>Loader</th>
+<th>Java</th>
+<th>Additional mod dependencies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.20.1</td>
+<td>Fabric</td>
+<td>17</td>
+<td>Fabric API</td>
+</tr>
+<tr>
+<td>1.20.1</td>
+<td>Forge</td>
+<td>17</td>
+<td>None</td>
+</tr>
+<tr>
+<td>1.21.1</td>
+<td>Fabric</td>
+<td>21</td>
+<td>Fabric API</td>
+</tr>
+<tr>
+<td>1.21.1</td>
+<td>NeoForge</td>
+<td>21</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<p>Choose the mod file matching your Minecraft version and loader. For multiplayer, install the mod on both the client and server.</p>
 <h3 id="how-to-enchant">How to enchant ?</h3>
 <p>Two new blocks have been added to: the Enchantment Infusion Table and the Enchantment Infusion Pedestal. Use item to right-click them to put it in, and empty-handed right-click to remove item from them.</p>
 <p>You need to place an enchantment infusion table (centre position) and enchantment infusion pedestals (surrounding position) like the picture below, then place the corresponding items on the pedestals according to the recipe (the order doesn't matter), and finally place the item you want to enchant on the infusion table in the centre, and wait for seconds for it to finish enchanting.</p>
@@ -755,9 +815,15 @@
 <h3 id="crafting-recipes">Crafting Recipes</h3>
 <p><img alt="image" src="../assets/enchantment-infusion/recipe.png" /></p>
 <h2 id="recipe">🪚Recipe</h2>
+<p>When adding or changing recipes through a data pack, use the directory for your Minecraft version:</p>
+<ul>
+<li>1.20.1: <code>data/&lt;namespace&gt;/recipes/&lt;recipe_name&gt;.json</code></li>
+<li>1.21.1: <code>data/&lt;namespace&gt;/recipe/&lt;recipe_name&gt;.json</code></li>
+</ul>
+<p>The enchantment infusion recipe below works in both versions. Simple infusion uses a different output item format in each version.</p>
 <h3 id="enchantment-infusion_1">Enchantment Infusion</h3>
 <p>This mod adds a recipe type (<code>enchantment_infusion:enchantment_infusion</code>). The JSON file for a single recipe is as follows:</p>
-<pre><code>{
+<pre><code class="language-json">{
   &quot;type&quot;: &quot;enchantment_infusion:enchantment_infusion&quot;,
   &quot;enchantment&quot;: &quot;minecraft:efficiency&quot;,
   &quot;force&quot;: false,
@@ -821,7 +887,7 @@
 <tr>
 <td><code>ingredients</code></td>
 <td>Required</td>
-<td>the ingredients of the recipe, is up to 8, the order does not matter (this is a shapeless recipe)</td>
+<td>1–8 recipe ingredients; the order does not matter (this is a shapeless recipe)</td>
 </tr>
 <tr>
 <td><code>input</code></td>
@@ -880,26 +946,31 @@
 </tbody>
 </table>
 <h3 id="simple-infusion">Simple Infusion</h3>
-<p>Since mod version <code>1.2.0</code>, a new recipe type (<code>enchantment_infusion:simple_infusion</code>) has been added. The JSON file for a single recipe is as follows:</p>
-<pre><code>{
+<p>Simple infusion (<code>enchantment_infusion:simple_infusion</code>) uses the pedestal ingredients to turn the central item into an output item. This custom recipe example uses only vanilla items and targets Minecraft 1.20.1 (Fabric / Forge):</p>
+<pre><code class="language-json">{
   &quot;type&quot;: &quot;enchantment_infusion:simple_infusion&quot;,
   &quot;ingredients&quot;: [
     {
       &quot;item&quot;: &quot;minecraft:redstone&quot;
     },
     {
-      &quot;tag&quot;: &quot;spell-dimension:essence/0&quot;
+      &quot;item&quot;: &quot;minecraft:iron_ingot&quot;
     }
   ],
   &quot;input&quot;: {
-    &quot;item&quot;: &quot;minecraft:leather_boots&quot;,
-    &quot;min_level&quot;: 4
+    &quot;item&quot;: &quot;minecraft:leather_boots&quot;
   },
   &quot;output&quot;: {
     &quot;Count&quot;: 1,
-    &quot;id&quot;: &quot;artifacts:running_shoes&quot;
+    &quot;id&quot;: &quot;minecraft:iron_boots&quot;
   },
   &quot;copy_nbt&quot;: false
+}
+</code></pre>
+<p>For Minecraft 1.21.1 (Fabric / NeoForge), replace <code>output</code> with the following object and leave the other fields unchanged. The quantity field is lowercase <code>count</code>, and additional item data uses <code>components</code> instead of the old <code>Count</code> / <code>tag</code> format:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;minecraft:iron_boots&quot;,
+  &quot;count&quot;: 1
 }
 </code></pre>
 <table>
@@ -919,7 +990,7 @@
 <tr>
 <td>ingredients</td>
 <td>Required</td>
-<td>the ingredients of the recipe, is up to 8, the order does not matter (this is a shapeless recipe)</td>
+<td>1–8 recipe ingredients; the order does not matter (this is a shapeless recipe)</td>
 </tr>
 <tr>
 <td>input</td>
@@ -934,15 +1005,14 @@
 <tr>
 <td>copy_nbt</td>
 <td>Optional</td>
-<td>whether or not to copy the NBT of the input item in the central infusion table to the output item, defaults to <code>true</code>.</td>
+<td>whether to copy input item data, defaults to <code>true</code>; copies NBT in 1.20.1, or component changes and merged custom data in 1.21.1</td>
 </tr>
 </tbody>
 </table>
 <h2 id="compatibility">🧩Compatibility</h2>
-<p>This mod has built-in REI and EMI compatible plug-ins, which means you can use either to view all recipes in this mod.</p>
+<p>All versions listed above include optional JEI, REI and EMI integrations for viewing enchantment infusion and simple infusion recipes. Install a viewer version matching your Minecraft version and loader.</p>
 <h2 id="feedback">✉️Feedback</h2>
-<p>This mod has not been fully tested yet, so it is still in Beta.</p>
-<p>If there are any bugs or suggestions, please provide feedback to the issue page.</p>
+<p>Report bugs or suggestions on <a href="https://github.com/Karashok-Leo/Enchantment-Infusion/issues">GitHub Issues</a>, including your Minecraft version, loader and mod version.</p>
 
 
 
