@@ -1,22 +1,25 @@
 # 战利品袋
 
-## 注意❗❗❗
-
-1.2.0版本，我几乎重写了整个模组。
-与之前有什么不同？
-1. 现在该模组不再依赖于除了Fabric API以外的其他前置模组。
-2. 现在通过数据包配置而不是配置文件。（如果你还没有做好将配置文件重写为数据包的准备，请不要更新！）
-3. 在以前每一个战利品袋都是一种新物品，这样做是为了适应原版配方输出等一些不支持在物品上写入NBT的操作。但这种做法是代价巨大的，引入了BRRP作为前置，而且违背常规逻辑。现在所有战利品袋都是同一种物品，战利品袋的数据存储在物品的NBT标签中。
-4. 现在模组在代码上是拓展性良好的，如果你是模组开发者，你可以使用模组提供的Provider类进行数据生成，甚至添加更多的战利品袋种类。
-
 ## 🪄介绍
 
 又一个战利品袋模组，为魔改而生。
 
+### 版本与安装
+
+| Minecraft | 加载器 | Java | 额外前置模组 |
+| --------- | ------ | ---- | ------------ |
+| 1.20.1 | Fabric | 17 | Fabric API |
+| 1.20.1 | Forge | 17 | 无 |
+| 1.21.1 | Fabric | 21 | Fabric API |
+| 1.21.1 | NeoForge | 21 | 无 |
+
+请选择与 Minecraft 版本和加载器相符的模组文件。多人游戏时，客户端和服务端都需要安装。
+
+### 使用方式
+
 ![image](assets/loot-bag/loot-bag.png)
 
-右键打开一个预览屏幕。
-潜行右键直接打开战利品袋。
+右键打开预览屏幕。单项和随机战利品袋支持潜行右键快捷开启：主手开启一个，副手开启整组。可选战利品袋需要在界面中选择奖励。
 
 ### (单项) 战利品袋
 
@@ -38,9 +41,46 @@
 
 ## ⚙️配置
 
-~~这个模组是高度可配置的，作为示例的配置文件会自动生成。~~
-版本1.2.0之后整个项目彻底重构，现在模组的大部分内容都是数据驱动的，你可以在[这里](https://github.com/Karashok-Leo/loot-bag/tree/master/example)找到示例数据包。
+自1.2.0起，战利品袋通过数据包定义，不再读取旧版配置文件。升级旧版整合包时，需要将原配置改写为数据包；不再需要BRRP前置。
+
+### 示例数据包
+
+请使用与游戏版本和加载器对应的示例，并保留其中的 `pack.mcmeta`：
+
+- [Fabric 1.20.1](https://github.com/Karashok-Leo/loot-bag/tree/master/example)
+- [Forge 1.20.1](https://github.com/Karashok-Leo/loot-bag/tree/forge-1.20.1/example)
+- [Fabric 1.21.1](https://github.com/Karashok-Leo/loot-bag/tree/fabric-1.21.1/example)
+- [NeoForge 1.21.1](https://github.com/Karashok-Leo/loot-bag/tree/neoforge-1.21.1/example)
+
+数据包的主要目录在以上版本中保持一致：
+
+- 战利品袋定义：`data/<命名空间>/loot-bag/bag/<名称>.json`
+- 奖励内容定义：`data/<命名空间>/loot-bag/content/<名称>.json`
+
+其中物品堆栈的格式随 Minecraft 版本变化：1.20.1使用 `id`、`Count` 和可选的 `tag`；1.21.1使用 `id`、`count` 和可选的 `components`。不要直接混用两个版本的物品数据。
+
+如果你是模组开发者，也可以使用模组提供的Provider类生成数据，或扩展战利品袋类型。
+
+### 战利品袋物品与版本迁移
+
+所有战利品袋共用物品ID `loot-bag:loot_bag`，通过袋子标识符引用数据包中的定义。Forge和NeoForge使用的加载器模组ID是 `loot_bag`，但物品和数据包命名空间仍是 `loot-bag`。
+
+安装并启用示例数据包后，可以用以下命令获取其中的单项战利品袋：
+
+Minecraft 1.20.1（Fabric / Forge），标识符保存在NBT字段 `BagId` 中：
+
+```mcfunction
+/give @s loot-bag:loot_bag{BagId:"loot-bag:single"}
+```
+
+Minecraft 1.21.1（Fabric / NeoForge），标识符保存在自定义数据组件 `loot-bag:bag_id` 中：
+
+```mcfunction
+/give @s loot-bag:loot_bag[loot-bag:bag_id="loot-bag:single"]
+```
+
+将 `loot-bag:single` 替换为你自己的袋子标识符即可。1.21.1不会读取旧的 `BagId`，也不会读取 `minecraft:custom_data` 中的 `BagId`；升级时需更新相关命令和物品数据。
 
 ## ✉️反馈
 
-如果有任何Bug或建议，请反馈到Github的Issue页面。
+如果有任何Bug或建议，请反馈到[GitHub Issues](https://github.com/Karashok-Leo/loot-bag/issues)，并注明 Minecraft 版本、加载器和模组版本。

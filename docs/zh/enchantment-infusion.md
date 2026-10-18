@@ -4,6 +4,17 @@
 
 这个模组添加了一种定向附魔方式， 灵感来源于[新生魔艺](https://www.curseforge.com/minecraft/mc-mods/ars-nouveau)中的附魔灌注配方。
 
+### 版本与安装
+
+| Minecraft | 加载器 | Java | 额外前置模组 |
+| --------- | ------ | ---- | ------------ |
+| 1.20.1 | Fabric | 17 | Fabric API |
+| 1.20.1 | Forge | 17 | 无 |
+| 1.21.1 | Fabric | 21 | Fabric API |
+| 1.21.1 | NeoForge | 21 | 无 |
+
+请选择与 Minecraft 版本和加载器相符的模组文件。多人游戏时，客户端和服务端都需要安装。
+
 ### 如何附魔
 
 本模组添加了两个新方块：附魔灌注台和附魔灌注基座。使用物品右键它们将其放入，空手右键取出其中物品。
@@ -18,11 +29,18 @@
 
 ## 🪚配方
 
+使用数据包添加或修改配方时，请注意目录随 Minecraft 版本变化：
+
+- 1.20.1：`data/<命名空间>/recipes/<配方名>.json`
+- 1.21.1：`data/<命名空间>/recipe/<配方名>.json`
+
+下方的魔咒灌注配方格式适用于这两个版本；简单灌注的输出物品格式需要按版本区分。
+
 ### 魔咒灌注
 
 本模组添加了一种配方类型（`enchantment_infusion:enchantment_infusion`）。实例配方JSON文件如下：
 
-```
+```json
 {
   "type": "enchantment_infusion:enchantment_infusion",
   "enchantment": "minecraft:efficiency",
@@ -66,7 +84,7 @@
 | type        | 必需   | 指定配方类型为附魔灌注                    |
 | enchantment | 必需   | 目标魔咒的标识符                       |
 | level       | 必需   | 魔咒等级                           |
-| ingredients | 必需   | 配方的原料，最多8个，次序不重要（这是无序配方）       |
+| ingredients | 必需   | 配方的原料，1至8个，次序不重要（这是无序配方）       |
 | input       | 可选   | 需要已有的魔咒，灌注时会消耗该魔咒              |
 | force       | 可选   | 是否忽略魔咒兼容性，强制匹配被附魔物品，默认为`false` |
 
@@ -87,9 +105,9 @@
 
 ### 简单灌注
 
-自本模组版本`1.2.0`以后，新增了一种配方类型（`enchantment_infusion:simple_infusion`）。实例配方JSON文件如下：
+简单灌注（`enchantment_infusion:simple_infusion`）使用基座上的原料，将中央物品转换为输出物品。下面是仅使用原版物品的自定义配方示例，适用于 Minecraft 1.20.1（Fabric / Forge）：
 
-```
+```json
 {
   "type": "enchantment_infusion:simple_infusion",
   "ingredients": [
@@ -97,35 +115,41 @@
       "item": "minecraft:redstone"
     },
     {
-      "tag": "spell-dimension:essence/0"
+      "item": "minecraft:iron_ingot"
     }
   ],
   "input": {
-    "item": "minecraft:leather_boots",
-    "min_level": 4
+    "item": "minecraft:leather_boots"
   },
   "output": {
     "Count": 1,
-    "id": "artifacts:running_shoes"
+    "id": "minecraft:iron_boots"
   },
   "copy_nbt": false
+}
+```
+
+在 Minecraft 1.21.1（Fabric / NeoForge）中，将上例的 `output` 替换为以下内容，其余字段保持不变。数量字段使用小写 `count`，额外物品数据使用 `components`，不再使用 `Count` 和 `tag`：
+
+```json
+{
+  "id": "minecraft:iron_boots",
+  "count": 1
 }
 ```
 
 | 配方字段        | 是否必需 | 说明                                 |
 | ----------- | ---- | ---------------------------------- |
 | type        | 必需   | 指定配方类型为简单灌注                        |
-| ingredients | 必需   | 配方的原料，最多8个，次序不重要（这是无序配方）           |
+| ingredients | 必需   | 配方的原料，1至8个，次序不重要（这是无序配方）           |
 | input       | 必需   | 中央灌注台的输入原料                         |
 | output      | 必需   | 输出物品                               |
-| copy_nbt    | 可选   | 是否拷贝中央灌注台的输入物品的NBT至输出物品上，默认为`true` |
+| copy_nbt    | 可选   | 是否拷贝输入物品的数据，默认为`true`；1.20.1拷贝NBT，1.21.1拷贝物品组件改动并合并自定义数据 |
 
 ## 🧩兼容
 
-本模组内置了REI和EMI的兼容插件，你可以使用两者之一查看本模组的所有配方。
+以上各版本均内置JEI、REI和EMI兼容插件，可查看魔咒灌注和简单灌注配方。这些配方查看器都是可选的，请安装与 Minecraft 版本和加载器相符的版本。
 
 ## ✉️反馈
 
-这个模组还没有经过完备的测试，所以目前仍处于Beta阶段。
-
-如果有任何Bug或建议，请反馈到Github的Issue页面。
+如果有任何Bug或建议，请反馈到[GitHub Issues](https://github.com/Karashok-Leo/Enchantment-Infusion/issues)，并注明 Minecraft 版本、加载器和模组版本。

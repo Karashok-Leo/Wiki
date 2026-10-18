@@ -1,22 +1,25 @@
 # Loot Bag
 
-## NOTES❗❗❗
-
-In version 1.2.0 I rewrote almost the entire mod.
-What's different from before?
-1. The mod now no longer depends on any other dependency mod other than the fabric api.
-2. It is now configured via datapack instead of config files. (Don't update if you're not ready to rewrite the config file as a datapack!)
-3. Every loot bag used to be a new item, this was done to accommodate some operations such as the vanilla recipe output that did not support writing NBT on items. But this practice was costly, introduced BRRP as a dependency, and defied conventional logic. Now all loot bags are the same item, and the loot bag data is stored in the item's NBT tag.
-4. The mod is now extensible in code, if you are a mod developer you can generate your datapack using the provider class provided by the mod and even add more loot bag types.
-
 ## 🪄Introduction
 
 Another loot bag mod, designed for modpacks.
 
+### Versions and Installation
+
+| Minecraft | Loader | Java | Additional mod dependencies |
+| --------- | ------ | ---- | --------------------------- |
+| 1.20.1 | Fabric | 17 | Fabric API |
+| 1.20.1 | Forge | 17 | None |
+| 1.21.1 | Fabric | 21 | Fabric API |
+| 1.21.1 | NeoForge | 21 | None |
+
+Choose the mod file matching your Minecraft version and loader. For multiplayer, install the mod on both the client and server.
+
+### How to Use
+
 ![image](assets/loot-bag/loot-bag.png)
 
-Right click to open a preview screen.
-Right click when sneaking to open the bag directly.
+Right-click to open a preview screen. Single and random loot bags support quick opening while sneaking: use the main hand to open one bag, or the offhand to open the whole stack. Optional loot bags require you to choose a reward in the screen.
 
 ### (Single) Loot Bag
 
@@ -38,9 +41,46 @@ Contains multiple sets of loot, and you can obtain a random set of them.
 
 ## ⚙️Configuration
 
-~~This mod is highly configurable. The config files will be automatically generated as examples.~~
-After version 1.2.0, the entire mod underwent a thorough refactoring. Now it is data driven (mostly), and the example data pack can be found [HERE](https://github.com/Karashok-Leo/loot-bag/tree/master/example).
+Since version 1.2.0, loot bags are defined through data packs instead of the old configuration files. When upgrading an older modpack, rewrite the configuration as a data pack. BRRP is no longer required.
+
+### Example Data Packs
+
+Use the example for your Minecraft version and loader, and keep its `pack.mcmeta`:
+
+- [Fabric 1.20.1](https://github.com/Karashok-Leo/loot-bag/tree/master/example)
+- [Forge 1.20.1](https://github.com/Karashok-Leo/loot-bag/tree/forge-1.20.1/example)
+- [Fabric 1.21.1](https://github.com/Karashok-Leo/loot-bag/tree/fabric-1.21.1/example)
+- [NeoForge 1.21.1](https://github.com/Karashok-Leo/loot-bag/tree/neoforge-1.21.1/example)
+
+The main data-pack directories are the same across these versions:
+
+- Bag definitions: `data/<namespace>/loot-bag/bag/<name>.json`
+- Reward content definitions: `data/<namespace>/loot-bag/content/<name>.json`
+
+Item-stack data depends on the Minecraft version: 1.20.1 uses `id`, `Count` and an optional `tag`; 1.21.1 uses `id`, `count` and optional `components`. Do not mix item data from the two formats.
+
+Mod developers can also use the provided provider classes to generate data or add more loot bag types.
+
+### Bag Items and Version Migration
+
+All loot bags share the item ID `loot-bag:loot_bag` and reference data-pack definitions using a bag identifier. Forge and NeoForge use `loot_bag` as the loader mod ID, while the item and data-pack namespace remains `loot-bag`.
+
+After installing and enabling the example data pack, obtain its single loot bag with the command for your version:
+
+Minecraft 1.20.1 (Fabric / Forge) stores the identifier in the NBT field `BagId`:
+
+```mcfunction
+/give @s loot-bag:loot_bag{BagId:"loot-bag:single"}
+```
+
+Minecraft 1.21.1 (Fabric / NeoForge) stores the identifier in the custom data component `loot-bag:bag_id`:
+
+```mcfunction
+/give @s loot-bag:loot_bag[loot-bag:bag_id="loot-bag:single"]
+```
+
+Replace `loot-bag:single` with your own bag identifier. Version 1.21.1 does not read the old `BagId` field, including `BagId` inside `minecraft:custom_data`; update related commands and item data when upgrading.
 
 ## ✉️Feedback
 
-If there are any bugs or suggestions, please provide feedback to the issue page.
+Report bugs or suggestions on [GitHub Issues](https://github.com/Karashok-Leo/loot-bag/issues), including your Minecraft version, loader and mod version.
